@@ -1,0 +1,43 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+/* color variable constant declaretion */
+
+
+.root{
+	-fx-background-color:#2E313B;
+	
+}
+.background-color-sidebar{
+	-fx-background-color:#2E303D;
+	-fx-border-width:0;
+}
+.sidebar-button{
+	-fx-background-color:transparent;
+	-fx-text-fill:white;
+	-fx-background-radius:0;
+}
+
+
+/*
+.sidebar-button:focused{
+		-fx-background-color:#2979ff;
+		-fx-border-width:0 0 1 0;
+	
+}
+.sidebar-button:active{
+		-fx-background-color:#2979ff;
+		-fx-border-width:0 0 1 0;
+	
+}
+* *
+*/
+.icon-color_white{
+	-fx-fill:white;
+	-fx-text-fill:white;
+}
+
+
+
+
+
+
+

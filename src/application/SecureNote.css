@@ -1,0 +1,39 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.header-color{
+	-fx-background-color:red;
+}
+
+.header_button{
+	-fx-background-radius:20;	
+}
+.green_color{
+	-fx-background-color:#43A047;
+	-fx-text-fill:white;
+}
+
+.yellow_color{
+	-fx-background-color:#FFD600;
+	-fx-text-fill:white;
+	
+}
+.icon-color_white{
+	-fx-fill:white;
+	-fx-text-fill:white;
+}
+
+.table-view {
+	-fx-border-width:0.0 0 0 0.0 ;
+    -fx-base: #272944;
+    -fx-control-inner-background: #272944;
+    -fx-background-color: #272944;
+    -fx-padding: 5;
+     
+    
+}
+.table-row-cell {
+    -fx-cell-size: 50px;
+}
+.table-column {
+  -fx-alignment: CENTER;
+}
+

@@ -1,0 +1,54 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.root{
+	-fx-background-color:#20232D;
+		
+}
+.label-color{
+		-fx-text-fill:#EEEEEE;
+		-fx-font-size:14px;
+	
+}
+.textfield{
+	-fx-border-color: grey;
+  -fx-border-width: 0 0 1.5 0; 
+  -fx-background-color:transparent;
+  -fx-text-fill:white;
+  -fx-padding:0.0 0.0 0.0 2px;
+  -fx-font-size:13px;
+}
+.textfield:focused{
+	-fx-border-color:#2979ff;
+}
+#add_btn{
+	-fx-background-color:#2979FF;
+	-fx-text-fill:white;
+	-fx-background-radius:50;
+}
+
+.combo-box-base  {
+	-fx-background-color:#2E313B;
+		-fx-background:#2E313B;
+}
+	
+ .list-cell 
+{
+    -fx-text-fill:white;
+    -fx-padding: 3 0 2 7;
+    -fx-cell-size: 2.66667em; 
+    -fx-background-color:#2E313B;
+   
+}
+.combo-box-popup .list-view{
+	-fx-background-color:transparent;
+	 
+}
+.combo-box-popup .list-view .list-cell
+{
+    -fx-background-color: #2E313B;
+    -fx-background-radius:0;
+       -fx-padding: 4 0 4 5;
+        -fx-border-width:0.0 0.0 0.5 0;
+       -fx-border-color:#18192A;
+    
+   
+} 

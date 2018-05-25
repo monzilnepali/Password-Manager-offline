@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="503.0" prefWidth="781.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.info.controller.MainWindowController">
+   <top>
+      <MenuBar fx:id="menubar" prefHeight="10.0" prefWidth="10.0" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem fx:id="aboutMenu" mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+         <padding>
+            <Insets right="5.0" />
+         </padding>
+      </MenuBar>
+   </top>
+   <right>
+      <BorderPane fx:id="RightSideView" prefHeight="478.0" prefWidth="612.0" style="-fx-border-width: 0;" BorderPane.alignment="CENTER">
+      </BorderPane>
+   </right>
+   <left>
+      <AnchorPane prefHeight="478.0" prefWidth="169.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="home" layoutY="104.0" mnemonicParsing="false" onAction="#btn1Action" prefHeight="48.0" prefWidth="169.0" style="-fx-background-color: #20232D;" styleClass="sidebar-button" text="Password Manager">
+               <padding>
+                  <Insets right="2.0" />
+               </padding>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="secure_note" layoutY="152.0" mnemonicParsing="false" onAction="#btn1Action" prefHeight="48.0" prefWidth="169.0" styleClass="sidebar-button" text="Secure Note">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="password_generator" layoutY="200.0" mnemonicParsing="false" onAction="#btn1Action" prefHeight="48.0" prefWidth="169.0" styleClass="sidebar-button" text="Password Generator">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label layoutX="25.0" layoutY="44.0" text="Password Manager" textFill="WHITE" />
+            <FontAwesomeIconView fx:id="settingBtn" glyphName="COG" layoutX="129.0" layoutY="459.0" size="25" styleClass="icon-color_white">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </FontAwesomeIconView>
+         </children>
+      </AnchorPane>
+   </left>
+</BorderPane>

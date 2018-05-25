@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="450.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.info.controller.FxmlController">
+   <children>
+      <Label fx:id="emailAddress_label" layoutX="133.0" layoutY="145.0" text="Email Address">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <TextField fx:id="signup_emailAddress_textField" focusTraversable="false" layoutX="269.0" layoutY="136.0" prefHeight="35.0" prefWidth="250.0" promptText="Email Address">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <Label fx:id="signupLabel" layoutX="279.0" layoutY="68.0" text="Signup ">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="password_label" layoutX="133.0" layoutY="196.0" text="Master Password">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="repassword_label" layoutX="133.0" layoutY="242.0" text="Retype Password">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="signup_password_textField" focusTraversable="false" layoutX="269.0" layoutY="190.0" prefHeight="35.0" prefWidth="250.0" promptText="Master Password">
+         <font>
+            <Font size="14.0" />
+         </font></PasswordField>
+      <PasswordField fx:id="signup_repassword_textField" focusTraversable="false" layoutX="269.0" layoutY="235.0" prefHeight="35.0" prefWidth="250.0" promptText="Retype Password">
+         <font>
+            <Font size="14.0" />
+         </font></PasswordField>
+      <Button fx:id="signup_btn" layoutX="260.0" layoutY="344.0" mnemonicParsing="false" onAction="#signupUser" prefHeight="32.0" prefWidth="131.0" text="Signup" />
+      <CheckBox fx:id="termCondition_label" layoutX="255.0" layoutY="300.0" mnemonicParsing="false" text="I have read all the terms and conditions" />
+      <Label layoutX="255.0" layoutY="360.0" />
+   </children>
+</AnchorPane>

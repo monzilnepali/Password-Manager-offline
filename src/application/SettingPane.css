@@ -1,0 +1,32 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.root{
+	-fx-background-color:#20232D;
+}
+
+.label-color_header{
+	-fx-text-fill:white;
+}
+.label-color{
+	-fx-text-fill:#EEEEEE;
+}
+.text-field{
+	-fx-border-color: grey;
+  -fx-border-width: 0 0 1.5 0; 
+  -fx-background-color:transparent;
+  -fx-text-fill:white;
+  -fx-font-size:14px;
+  
+}
+.text-field:hover{
+	-fx-border-color:#2979ff;
+}
+.changebtn{
+	-fx-background-color:#2979ff;
+	-fx-background-radius:2px;
+	-fx-text-fill:white;
+}
+.deletebtn{
+	-fx-background-color:#C62828;
+	-fx-background-radius:2px;
+	-fx-text-fill:white;
+}

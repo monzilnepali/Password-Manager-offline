@@ -1,0 +1,47 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+.root{
+	-fx-background-color:#20232D;
+	
+	
+}
+.label-color{
+	-fx-text-fill:#EEEEEE;
+}
+
+#login_btn{
+	-fx-background-color:#2979FF;
+	-fx-text-fill:white;
+	-fx-background-radius:30;
+}
+.text-field{
+		-fx-border-color: grey;
+  -fx-border-width: 0 0 1.5 0; 
+  -fx-background-color:transparent;
+  -fx-text-fill:white;
+  -fx-padding:0.0 0.0 0.0 30px;
+}
+
+.text-field:focused{
+	-fx-border-color:#2979ff;
+}
+
+.check-box .box {
+
+-fx-background-color: white;
+
+-fx-border-radius:0px; 
+
+
+}
+
+.check-box:selected .mark {
+
+-fx-background-color: white;
+
+}
+
+.check-box:selected .box {
+
+-fx-background-color: #2979ff;
+}

@@ -1,0 +1,77 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.root{
+	-fx-background-color:#20232D;
+	-fx-background:#20232D;
+}
+.header-color{
+	-fx-background-color:#2979ff;
+	-fx-text-fill:white;
+}
+.text-area{
+	
+     -fx-background-radius: 0;
+    -fx-border-width: 0;
+    -fx-text-fill:white;
+    -fx-font-size:13px;
+     -fx-background-insets: 5;
+    
+	
+}
+.text-area .content {
+    -fx-background-color: #2E313B;
+      
+    
+}
+	.text-area:focused .content {
+     -fx-border-width: 0;
+      -fx-background-radius: 0;
+}
+.label-color{
+	-fx-text-fill:#2979ff;
+}
+.textField{
+	-fx-border-color: grey;
+  -fx-border-width: 0 0 1.5 0; 
+  -fx-background-color:transparent;
+  -fx-text-fill:white;
+  -fx-padding:0.0 0.0 0.0 2px;
+}
+.textField:focused{
+		-fx-border-color:#2979ff;
+	
+}
+
+.combo-box-base  {
+	-fx-background-color:#2E313B;
+		-fx-background:#2E313B;
+}
+	
+ .list-cell 
+{
+    -fx-text-fill:white;
+    -fx-padding: 3 0 2 7;
+    -fx-cell-size: 2.66667em; 
+    -fx-background-color:#2E313B;
+   
+}
+.combo-box-popup .list-view{
+	-fx-background-color:#2E313B;
+	 
+}
+.combo-box-popup .list-view .list-cell
+{
+    -fx-background-color: #2E313B;
+    -fx-background-radius:0;
+       -fx-padding: 4 0 4 5;
+        -fx-border-width:0.0 0.0 0.5 0;
+       -fx-border-color:#18192A;
+    
+   
+} 
+.note_addBtn{
+	-fx-background-color:#2979FF;
+	-fx-text-fill:white;
+	-fx-background-radius:30;
+}
+
+	
