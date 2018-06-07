@@ -18,6 +18,8 @@ import com.info.model.User;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.concurrent.Service;
+import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.event.EventHandler;
@@ -226,7 +228,31 @@ private static boolean dialogFlag=false;
 	//	vuser_id=vuser.getUser_id();
 		//System.out.println("userid"+user.getUser_id());
 	//	currentUser.setText(vuser.getEmail());
-		getDataInTable();
+		//javafx concurrent
+		
+		Service<Void> datafetch=new Service<Void>() {
+
+			@Override
+			protected Task<Void> createTask() {
+			
+				return new Task<Void>() {
+
+					@Override
+					protected Void call() throws Exception {
+						getDataInTable();
+						return null;
+					}
+					
+				};
+			}
+			
+		};
+		datafetch.start();
+		
+		
+		
+		
+		
 		// Create ContextMenu
        
  
@@ -341,7 +367,7 @@ private static boolean dialogFlag=false;
 	public  void getDataInTable(){
 		
 		    ObservableList<PasswordData> list=FXCollections.observableArrayList(getDataFromDatabase());
-		   label.setCellValueFactory(new PropertyValueFactory<PasswordData,String>("label"));
+		    label.setCellValueFactory(new PropertyValueFactory<PasswordData,String>("label"));
 			email.setCellValueFactory(new PropertyValueFactory<PasswordData,String>("email"));
 			categories.setCellValueFactory(new PropertyValueFactory<PasswordData,String>("categories"));
 		//	dateOfCreation.setCellValueFactory(new PropertyValueFactory<PasswordData,Integer>("dateOfCreation"));
@@ -390,6 +416,7 @@ private static boolean dialogFlag=false;
 		 ExecutorService executor = Executors.newSingleThreadExecutor();
 		  Callable < ArrayList < PasswordData >> c = new Callable < ArrayList < PasswordData >> () {
 		   public ArrayList < PasswordData > call() {
+			   System.out.println("thread fetch data: "+Thread.currentThread().getName());
 		    ArrayList < PasswordData > list = UserDao.RetrievePasswordDb(vuser);
 		    return list;
 		   }

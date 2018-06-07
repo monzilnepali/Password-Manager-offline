@@ -266,34 +266,8 @@ public class FxmlController implements Initializable   {
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		System.out.println("fxml controller called");
-		resetPasswordLink.setOnAction(e->{
-			//opening password reset panel and hiding login
-			FXMLLoader loader=new FXMLLoader(getClass().getResource("/application/ResetPassword.fxml"));
-			try {
-				loader.load();
-				ResetPasswordController newcontroller=loader.getController();
-				
-			} catch (Exception e1) {
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
-			}
-			Parent p=loader.getRoot();
-			
-			
-			
-			
-			Scene scene =new Scene(p);
-			scene.getStylesheets().add(getClass().getResource("/application/ResetPassword.css").toExternalForm());
 		
-			Stage stage=new Stage();
-			Stage primaryStage=(Stage)((Node)e.getSource()).getScene().getWindow();
-			stage.setScene(scene);
-			stage.setTitle("password reset");
-			stage.initModality(Modality.WINDOW_MODAL);
-			stage.initOwner(primaryStage);
-			stage.setResizable(false);
-			stage.show();
-		});
+	
 		
 		
 	}

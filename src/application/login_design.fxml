@@ -3,7 +3,6 @@
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
@@ -51,8 +50,6 @@
             </Label>
             <FontAwesomeIconView fill="#727272" glyphName="ENVELOPE" layoutX="111.0" layoutY="130.0" size="14" wrappingWidth="13.999997079372406" x="50.0" y="50.0" />
             <FontAwesomeIconView fill="#727272" glyphName="UNLOCK_ALT" layoutX="111.0" layoutY="221.0" size="16" text="" wrappingWidth="13.999997079372406" x="50.0" y="50.0" />
-            <Hyperlink fx:id="resetPasswordLink" layoutX="338.0" layoutY="371.0" prefHeight="29.0" prefWidth="88.0" text="Click here" />
-            <Label layoutX="222.0" layoutY="375.0" styleClass="label-color" text="Forget Password?" />
          </children>
       </Pane>
     

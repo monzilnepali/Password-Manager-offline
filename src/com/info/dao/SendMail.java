@@ -26,7 +26,7 @@ public static Boolean SendMailMethod(String code,String ToAddress){
     //Establishing a session with required user details
     Session session = Session.getInstance(props, new javax.mail.Authenticator() {
         protected PasswordAuthentication getPasswordAuthentication() {
-            return new PasswordAuthentication("[emailaddress]", "[*********]");
+            return new PasswordAuthentication("manjilnepali98@gmail.com", "Manjilgautam1");
         }
     });
     

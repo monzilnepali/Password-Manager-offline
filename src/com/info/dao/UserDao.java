@@ -190,6 +190,7 @@ public class UserDao {
 		return false;
 	}
 	public static ArrayList<PasswordData> RetrievePasswordDb(User vuser){
+		System.out.println("current Thread: "+Thread.currentThread().getName());
 		Connection conn=null;
 		PreparedStatement pst=null;
 		ResultSet rs=null;
