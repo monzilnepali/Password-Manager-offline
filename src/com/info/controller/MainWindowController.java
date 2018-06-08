@@ -20,6 +20,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.concurrent.Service;
 import javafx.concurrent.Task;
+import javafx.concurrent.WorkerStateEvent;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.event.EventHandler;
@@ -366,15 +367,33 @@ private static boolean dialogFlag=false;
 	
 	public  void getDataInTable(){
 		
-		    ObservableList<PasswordData> list=FXCollections.observableArrayList(getDataFromDatabase());
-		    label.setCellValueFactory(new PropertyValueFactory<PasswordData,String>("label"));
-			email.setCellValueFactory(new PropertyValueFactory<PasswordData,String>("email"));
-			categories.setCellValueFactory(new PropertyValueFactory<PasswordData,String>("categories"));
-		//	dateOfCreation.setCellValueFactory(new PropertyValueFactory<PasswordData,Integer>("dateOfCreation"));
-			lastDateOfModify.setCellValueFactory(new PropertyValueFactory<PasswordData,Integer>("lastDateOfModify"));
-			
-			table.setItems(list);
-			
+	     //   ArrayList<PasswordData> passwordlist;
+	        
+	        Service<Void> databaseService=new Service<Void>() {
+
+				@Override
+				protected Task<Void> createTask() {
+					return new Task<Void>() {
+
+						@Override
+						protected Void call() throws Exception {
+					   System.out.println("database thread :"+Thread.currentThread().getName());
+					  
+						    ObservableList<PasswordData> list=FXCollections.observableArrayList(UserDao.RetrievePasswordDb(vuser));
+						    label.setCellValueFactory(new PropertyValueFactory<PasswordData,String>("label"));
+							email.setCellValueFactory(new PropertyValueFactory<PasswordData,String>("email"));
+							categories.setCellValueFactory(new PropertyValueFactory<PasswordData,String>("categories"));
+						//	dateOfCreation.setCellValueFactory(new PropertyValueFactory<PasswordData,Integer>("dateOfCreation"));
+							lastDateOfModify.setCellValueFactory(new PropertyValueFactory<PasswordData,Integer>("lastDateOfModify"));
+							
+							table.setItems(list);
+							
+							return null;
+						}};
+				}};
+		
+				databaseService.start();
+				
 
 			
 			
@@ -411,29 +430,7 @@ private static boolean dialogFlag=false;
        
 	}
 	//get table data from database
-	public ArrayList<PasswordData> getDataFromDatabase(){
-		
-		 ExecutorService executor = Executors.newSingleThreadExecutor();
-		  Callable < ArrayList < PasswordData >> c = new Callable < ArrayList < PasswordData >> () {
-		   public ArrayList < PasswordData > call() {
-			   System.out.println("thread fetch data: "+Thread.currentThread().getName());
-		    ArrayList < PasswordData > list = UserDao.RetrievePasswordDb(vuser);
-		    return list;
-		   }
-		  };
-		  Future<ArrayList<PasswordData>> future = executor.submit(c);
-		  try {
-		   ArrayList<PasswordData> result = future.get(); //waits for the thread to complete
-
-		   return result;
-		  } catch (ExecutionException | InterruptedException e) {
-		   e.printStackTrace();
-		  }
-		  executor.shutdown();
-		
-		return null;
-		
-	}
+	
 	//showing edit window
 	public void editDataFunction(Event e,PasswordData pd,Boolean flag) throws Exception{
 		   Stage primaryStage=(Stage)((Node)e.getSource()).getScene().getWindow();
