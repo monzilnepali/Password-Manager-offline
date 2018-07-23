@@ -163,7 +163,8 @@ public class UserDao {
 		}
 		return false;
 	}
-	public static boolean checkUserCount(){
+	
+    public static boolean checkUserCount(){
 		//checking the number of user in database
 		Connection conn=null;
 		Statement st = null;
@@ -173,6 +174,7 @@ public class UserDao {
 			String query="SELECT COUNT(*) AS total FROM userdb";
 			 st=conn.createStatement();
 			 rs=st.executeQuery(query);
+			
 			System.out.println(rs.getInt("total"));
 			System.out.println("key ");
 			if(rs.getInt("total")>=1){
@@ -185,6 +187,7 @@ public class UserDao {
 			try{rs.close();}catch(Exception e){/* igonored */}
 			try{st.close();}catch(Exception e){/* igonored */}
 			try{conn.close();}catch(Exception e){/* igonored */}
+			
 			
 		}
 		return false;

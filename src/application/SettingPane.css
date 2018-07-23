@@ -30,3 +30,21 @@
 	-fx-background-radius:2px;
 	-fx-text-fill:white;
 }
+.card{
+	-fx-background-color:transparent;
+	-fx-border-width:1 1 1 1;
+	
+	-fx-border-radius:2px;
+}
+.card-red{
+	-fx-border-color:red;
+}
+.card-green{
+	-fx-border-color:green;
+}
+.green-color{
+	-fx-background-color:green;
+}
+.red-color{
+	-fx-background-color:red;
+}

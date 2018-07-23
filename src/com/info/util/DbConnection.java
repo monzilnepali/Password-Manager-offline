@@ -11,7 +11,7 @@ public class DbConnection {
 	public static Connection getConnection(){
 		try{
 			Class.forName("org.sqlite.JDBC");
-			Connection conn=DriverManager.getConnection("jdbc:sqlite:E:\\SQLiteStudio\\PasswordManager");
+			Connection conn=DriverManager.getConnection("jdbc:sqlite:password");
 //			Alert alert=new Alert(AlertType.INFORMATION);
 //			alert.setTitle("Password Manager");
 //			alert.setHeaderText(null);

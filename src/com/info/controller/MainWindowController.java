@@ -3,6 +3,7 @@ package com.info.controller;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 import java.util.ResourceBundle;
 import java.util.concurrent.Callable;
@@ -80,11 +81,14 @@ private static boolean dialogFlag=false;
     @FXML private FontAwesomeIconView settingBtn;
     @FXML private MenuItem aboutMenu;
    @FXML private MenuBar menubar;
+   //singleton 
+   private CurrentUserSingleton singleton=CurrentUserSingleton.getInstance();
+   
    
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		
-		
+		vuser=singleton.getVuser();
+		System.out.println("main window controller initlialize called");
 		settingBtn.setOnMousePressed(e->{
 			System.out.println("setting btn clicked");
 		
@@ -211,7 +215,7 @@ private static boolean dialogFlag=false;
 		
 		previousBtn=currentActiveBtn;
 	}
-	public  void mainWindowInitialize(User user){
+	public  void mainWindowInitialize(List<PasswordData> pdlist){
 	//	System.out.println("home called");
 		//loading sideview of tableview
 		FXMLLoader loader=new FXMLLoader(getClass().getResource("/application/Home.fxml"));
@@ -225,30 +229,17 @@ private static boolean dialogFlag=false;
 		}
 		
 		
-		this.vuser=user;
-	//	vuser_id=vuser.getUser_id();
-		//System.out.println("userid"+user.getUser_id());
-	//	currentUser.setText(vuser.getEmail());
-		//javafx concurrent
+		System.out.println("populating table");
+		ObservableList<PasswordData> list=FXCollections.observableArrayList(pdlist);
+        label.setCellValueFactory(new PropertyValueFactory<PasswordData,String>("label"));
+        email.setCellValueFactory(new PropertyValueFactory<PasswordData,String>("email"));
+        categories.setCellValueFactory(new PropertyValueFactory<PasswordData,String>("categories"));
+    //  dateOfCreation.setCellValueFactory(new PropertyValueFactory<PasswordData,Integer>("dateOfCreation"));
+        lastDateOfModify.setCellValueFactory(new PropertyValueFactory<PasswordData,Integer>("lastDateOfModify"));
+        
+        table.setItems(list);
 		
-		Service<Void> datafetch=new Service<Void>() {
-
-			@Override
-			protected Task<Void> createTask() {
-			
-				return new Task<Void>() {
-
-					@Override
-					protected Void call() throws Exception {
-						getDataInTable();
-						return null;
-					}
-					
-				};
-			}
-			
-		};
-		datafetch.start();
+		
 		
 		
 		

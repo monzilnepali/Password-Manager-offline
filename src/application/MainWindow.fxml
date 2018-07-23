@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="503.0" prefWidth="781.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.info.controller.MainWindowController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="503.0" prefWidth="781.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.info.controller.MainWindowController">
    <top>
       <MenuBar fx:id="menubar" prefHeight="10.0" prefWidth="10.0" BorderPane.alignment="CENTER">
         <menus>
@@ -43,7 +43,7 @@
    <left>
       <AnchorPane prefHeight="478.0" prefWidth="169.0" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="home" layoutY="104.0" mnemonicParsing="false" onAction="#btn1Action" prefHeight="48.0" prefWidth="169.0" style="-fx-background-color: #20232D;" styleClass="sidebar-button" text="Password Manager">
+            <Button fx:id="home" alignment="BASELINE_LEFT" layoutY="104.0" mnemonicParsing="false" onAction="#btn1Action" prefHeight="48.0" prefWidth="169.0" style="-fx-background-color: #20232D;" styleClass="sidebar-button" text="       Password Manager">
                <padding>
                   <Insets right="2.0" />
                </padding>
@@ -51,12 +51,12 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button fx:id="secure_note" layoutY="152.0" mnemonicParsing="false" onAction="#btn1Action" prefHeight="48.0" prefWidth="169.0" styleClass="sidebar-button" text="Secure Note">
+            <Button fx:id="secure_note" alignment="BASELINE_LEFT" contentDisplay="CENTER" layoutY="152.0" mnemonicParsing="false" onAction="#btn1Action" prefHeight="48.0" prefWidth="169.0" styleClass="sidebar-button" text="     Secure Note">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button fx:id="password_generator" layoutY="200.0" mnemonicParsing="false" onAction="#btn1Action" prefHeight="48.0" prefWidth="169.0" styleClass="sidebar-button" text="Password Generator">
+            <Button fx:id="password_generator" alignment="BASELINE_LEFT" layoutY="200.0" mnemonicParsing="false" onAction="#btn1Action" prefHeight="48.0" prefWidth="169.0" styleClass="sidebar-button" text="Password Generator">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -67,6 +67,8 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </FontAwesomeIconView>
+            <FontAwesomeIconView fill="WHITE" glyphName="STICKY_NOTE" layoutX="8.0" layoutY="132.0" />
+            <FontAwesomeIconView fill="WHITE" glyphName="DATABASE" layoutX="8.0" layoutY="180.0" />
          </children>
       </AnchorPane>
    </left>

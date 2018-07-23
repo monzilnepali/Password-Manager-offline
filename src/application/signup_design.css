@@ -1,23 +1,33 @@
 /* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
 
 .root{
-	-fx-background-color:#424242;
+	-fx-background-color:#20232D;
 }
-#signupLabel,#emailAddress_label,#password_label,#repassword_label,#termCondition_label{
+.main-color{
+	-fx-background-color:#2979ff;
+}
+.labelColor{
 	-fx-text-fill:#2979ff;
 }
-#signup_emailAddress_textField,#signup_password_textField,#signup_repassword_textField{
+.white{
+	-fx-text-fill:white;
+}
+.h1{
+	-fx-font-size:20px;
+}
+.textField{
 
 -fx-border-color: grey;
   -fx-border-width: 0 0 1.5 0; 
   -fx-background-color:transparent;
   -fx-text-fill:white;
+  -fx-font-size:18px;
   -fx-padding:0.0 0.0 0.0 2px;
 }
-#signup_emailAddress_textField:focused,#signup_password_textField:focused,#signup_repassword_textField:focused{
+.textField:focused{
 	-fx-border-color:#2979ff;
 }
-#signup_btn{
+.button{
 	-fx-background-color:#2979ff;
 	-fx-background-radius:30;
 	-fx-text-fill:white;

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXProgressBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="204.0" prefWidth="372.0" style="-fx-background-color: #20232D;" stylesheets="@Preloader.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.info.controller.PreLoaderController">
+   <children>
+      <JFXProgressBar layoutX="86.0" layoutY="109.0" prefHeight="7.0" />
+      <Label layoutX="149.0" layoutY="69.0" text="Fetching data" textFill="#2979ff" />
+   </children>
+</AnchorPane>

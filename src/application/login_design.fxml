@@ -7,51 +7,46 @@
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="500" prefWidth="700" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.info.controller.FxmlController">
+<AnchorPane prefHeight="500" prefWidth="700" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.info.controller.loginController">
    <children>
-      <Pane fx:id="loginPane" layoutX="41.0" layoutY="51.0" prefHeight="413.0" prefWidth="601.0">
-         <children>
-            <Label fx:id="emailAddress_label" layoutX="154.0" layoutY="129.0" styleClass="label-color" text="Email Address">
-               <font>
-                  <Font size="17.0" />
-               </font>
-            </Label>
-            
-            <Label fx:id="password_label" layoutX="154.0" layoutY="219.0" styleClass="label-color" text="Password">
-               <font>
-                  <Font size="17.0" />
-               </font>
-            </Label>
-            <TextField fx:id="emailField" focusTraversable="false" layoutX="154.0" layoutY="155.0" prefHeight="39.0" prefWidth="319.0" promptText="Enter your Name" styleClass="text-field">
-               <font>
-                  <Font size="16.0" />
-               </font>
-            </TextField>
-            <PasswordField fx:id="passwordField" focusTraversable="false" layoutX="154.0" layoutY="245.0" prefHeight="39.0" prefWidth="319.0" promptText="Password" styleClass="text-field">
-               <font>
-                  <Font size="16.0" />
-               </font>
-            </PasswordField>
-            <Button fx:id="login_btn" layoutX="213.0" layoutY="331.0" mnemonicParsing="false" onAction="#checkLogin" prefHeight="26.0" prefWidth="189.0" text="Login">
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Button>
-            <Label fx:id="title_label" layoutX="206.0" layoutY="68.0" styleClass="label-color" text="Password Manager">
-               <font>
-                  <Font size="27.0" />
-               </font>
-            </Label>
-            <FontAwesomeIconView fill="#727272" glyphName="ENVELOPE" layoutX="111.0" layoutY="130.0" size="14" wrappingWidth="13.999997079372406" x="50.0" y="50.0" />
-            <FontAwesomeIconView fill="#727272" glyphName="UNLOCK_ALT" layoutX="111.0" layoutY="221.0" size="16" text="" wrappingWidth="13.999997079372406" x="50.0" y="50.0" />
-         </children>
-      </Pane>
+      <Label fx:id="title_label" layoutX="251.0" layoutY="90.0" styleClass="label-color" text="Password Manager">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <Label fx:id="emailAddress_label" layoutX="130.0" layoutY="202.0" styleClass="label-color" text="Email Address">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      
+            <Label fx:id="password_label" layoutX="130.0" layoutY="279.0" styleClass="label-color" text="Password">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="emailField" focusTraversable="false" layoutX="252.0" layoutY="189.0" prefHeight="39.0" prefWidth="319.0" promptText="Enter your Name" styleClass="text-field">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <PasswordField fx:id="passwordField" focusTraversable="false" layoutX="252.0" layoutY="273.0" prefHeight="39.0" prefWidth="319.0" promptText="Password" styleClass="text-field">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </PasswordField>
+      <Button fx:id="login_btn" layoutX="256.0" layoutY="370.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="189.0" text="Login">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <FontAwesomeIconView fill="#727272" glyphName="ENVELOPE" layoutX="202.0" layoutY="164.0" size="14" wrappingWidth="13.999997079372406" x="50.0" y="50.0" />
+      <FontAwesomeIconView fill="#727272" glyphName="UNLOCK_ALT" layoutX="209.0" layoutY="248.0" size="16" text="" wrappingWidth="13.999997079372406" x="50.0" y="50.0" />
     
       
       

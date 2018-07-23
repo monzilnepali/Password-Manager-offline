@@ -1,52 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
+<?import java.lang.String?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.layout.Pane?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="479.0" prefWidth="612.0" styleClass="root" stylesheets="@SettingPane.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="467.0" prefWidth="613.0" stylesheets="@SettingPane.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <AnchorPane prefHeight="234.0" prefWidth="582.0" style="-fx-background-color: #2E313B;">
+      <Pane layoutX="-1.0" prefHeight="65.0" prefWidth="613.0" styleClass="changebtn">
          <children>
-            <Label layoutX="21.0" layoutY="14.0" styleClass="label-color_header" text="Change Password">
-               <font>
-                  <Font size="15.0" />
-               </font>
-            </Label>
-            <Label fx:id="currentPassword_label" layoutX="25.0" layoutY="54.0" styleClass="label-color" text="Current Password:" />
-            <PasswordField fx:id="currentPasswordField" layoutX="25.0" layoutY="72.0" prefHeight="34.0" prefWidth="242.0" />
-            <Label fx:id="newPassword_label" layoutX="25.0" layoutY="118.0" styleClass="label-color" text="New Password:" />
-            <PasswordField fx:id="newPasswordField" layoutX="25.0" layoutY="137.0" prefHeight="34.0" prefWidth="242.0" />
-            <PasswordField fx:id="repeatPasswordField" layoutX="308.0" layoutY="137.0" prefHeight="34.0" prefWidth="242.0" />
-            <Label layoutX="308.0" layoutY="118.0" styleClass="label-color" text="Repeat Password:" />
-            <Button fx:id="changeBtn" layoutX="25.0" layoutY="186.0" mnemonicParsing="false" styleClass="changebtn" text="Change Password">
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
-            <Label fx:id="msgLabel" layoutX="152.0" layoutY="190.0" styleClass="label-color" />
-         </children>
-         <VBox.margin>
-            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
-         </VBox.margin>
-      </AnchorPane>
-      <AnchorPane prefHeight="88.0" prefWidth="582.0" style="-fx-background-color: #2E313B;">
+            <Label layoutX="265.0" layoutY="22.0" text="Setting pane" />
+         </children></Pane>
+      <Pane layoutX="18.0" layoutY="96.0" prefHeight="90.0" prefWidth="575.0">
          <children>
-            <Label layoutX="21.0" layoutY="14.0" styleClass="label-color" text="Delete Account" />
-            <Button fx:id="deleteBtn" layoutX="21.0" layoutY="47.0" mnemonicParsing="false" styleClass="deletebtn" text="Delete Account">
+            <Label layoutX="23.0" layoutY="14.0" styleClass="label-color" text="Delete all Password " />
+            <Button layoutX="23.0" layoutY="45.0" mnemonicParsing="false" text="DELETE">
+               <styleClass>
+                  <String fx:value="red-color" />
+                  <String fx:value="label-color" />
+               </styleClass>
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
          </children>
-         <VBox.margin>
-            <Insets bottom="15.0" left="15.0" right="15.0" top="5.0" />
-         </VBox.margin>
-      </AnchorPane>
+         <styleClass>
+            <String fx:value="card" />
+            <String fx:value="card-red" />
+         </styleClass>
+      </Pane>
+      <Pane layoutX="18.0" layoutY="207.0" prefHeight="90.0" prefWidth="575.0">
+         <children>
+            <Label layoutX="23.0" layoutY="14.0" styleClass="label-color" text="Delete all Secure Note " />
+            <Button layoutX="23.0" layoutY="45.0" mnemonicParsing="false" text="DELETE">
+               <styleClass>
+                  <String fx:value="red-color" />
+                  <String fx:value="label-color" />
+               </styleClass>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+         <styleClass>
+            <String fx:value="card" />
+            <String fx:value="card-red" />
+         </styleClass>
+      </Pane>
+      <Pane layoutX="18.0" layoutY="312.0" prefHeight="90.0" prefWidth="575.0">
+         <children>
+            <Label layoutX="23.0" layoutY="14.0" styleClass="label-color" text="Backup your all data" />
+            <Button layoutX="23.0" layoutY="45.0" mnemonicParsing="false" text="Backup">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <styleClass>
+                  <String fx:value="label-color" />
+                  <String fx:value="green-color" />
+               </styleClass>
+            </Button>
+         </children>
+         <styleClass>
+            <String fx:value="card" />
+            <String fx:value="card-green" />
+         </styleClass>
+      </Pane>
    </children>
-</VBox>
+</AnchorPane>
