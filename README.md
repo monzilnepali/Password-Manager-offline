@@ -1,4 +1,4 @@
-# Password-Manager-offline-
+# Password-Manager-offline
 **Password Manager** is type of password Manager which is installed locally installed in local machine and all data is locally store in your device
 
 
